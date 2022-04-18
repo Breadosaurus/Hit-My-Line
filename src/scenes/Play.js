@@ -4,7 +4,7 @@ class Play extends Phaser.Scene {
     }
     preload() {
         this.load.image('rocket', './assets/heart.png');
-        this.load.spritesheet('spaceship', './assets/dialup-sheet.png', {frameWidth: 95, frameHeight:47, startFrame: 0, endFrame: 5});
+        this.load.spritesheet('spaceship', './assets/dialup-Sheet.png', {frameWidth: 95, frameHeight:47, startFrame: 0, endFrame: 5});
         this.load.image('payphones', './assets/payphones.png');
         this.load.spritesheet('explosion', './assets/hearteffect.png', {frameWidth: 110, frameHeight:54, startFrame: 0, endFrame: 5});
 
@@ -28,11 +28,11 @@ class Play extends Phaser.Scene {
        
         // add spaceships (x3)
         this.ship01 = new Spaceship(this, game.config.width + borderUISize*6, borderUISize*4, 'spaceship', 0, 30).setOrigin(0, 0);
-        //this.ship01.anims.play('space');
+        this.ship01.anims.play('space');
         this.ship02 = new Spaceship(this, game.config.width + borderUISize*3, borderUISize*5 + borderPadding*2, 'spaceship', 0, 20).setOrigin(0,0);
-        //this.ship02.anims.play('space');
+        this.ship02.anims.play('space');
         this.ship03 = new Spaceship(this, game.config.width, borderUISize*6 + borderPadding*4, 'spaceship', 0, 10).setOrigin(0,0);
-        //this.ship03.anims.play('space');
+        this.ship03.anims.play('space');
         
         keyF = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.F);
         keyR = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.R);
